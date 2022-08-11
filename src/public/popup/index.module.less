@@ -1,0 +1,43 @@
+@import '~@/less/mixin.less';
+@import '~@/less/var.less';
+
+
+
+
+
+
+
+
+.popups{
+    .self-center();
+    z-index: 999;
+    border-radius: 5px;
+    padding: 14px 20px;
+    display: flex;
+    color: #fff;
+    align-items: center; // 垂直居中
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5); // 边框阴影
+    white-space: nowrap; // 无论怎么挤压的情况下文本都不换行
+
+    // 过渡效果-显示
+    opacity: 0;
+    transition: 0.5s;
+    transform: translate(-50%, -50%) translateY(15px); // 初始位置下移动15px
+
+    &-info{  // &-info同等于.popups-info
+        background: @primary;
+    }
+    &-error{
+        background: @danger;
+    }
+    &-success{
+        background: @success;
+    }
+    &-warn{
+        background: @warn;
+    }
+}
+.icon{
+    font-size: 20px;
+    margin-right: 7px;
+}

@@ -1,0 +1,24 @@
+@import "./var.less";
+
+html {
+  color: @words;
+  font-family: "-apple-system",
+              "BlinkMacSystemFont",
+              "Roboto",
+              "Helvetica Neue",
+              "微软雅黑",
+              sans-serif; // 指定一个元素的字体
+  overflow: hidden;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+a {
+  color: inherit; // 指定一个属性应从父元素继承它的值
+  text-decoration: none; // 删除a标签的下划线
+  &:hover {
+    color: @primary; // 蓝色
+  }
+}
